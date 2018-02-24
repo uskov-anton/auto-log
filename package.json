@@ -1,6 +1,6 @@
 {
   "name": "auto-log",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Auto log",
   "main": "index.js",
   "keywords": [
