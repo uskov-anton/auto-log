@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "small automatic log utility",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uskov-anton/autologger.git"
+  },
   "keywords": [
     "auto",
     "autolog",
@@ -19,6 +23,10 @@
     "email": "uskov.anton@gmail.com",
     "url": "https://github.com/uskov-anton"
   },
+  "bugs": {
+    "url": "https://github.com/uskov-anton/autologger/issues"
+  },
+  "homepage": "https://github.com/uskov-anton/autologger#readme",
   "dependencies": {
     "debug": "^3.1.0"
   },
