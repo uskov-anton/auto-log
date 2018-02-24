@@ -23,10 +23,10 @@ const getLogWrapper = (type = '') => {
     }
 };
 
-const preprocess = debug('Autolog:preprocess');
-const postprocess = debug('Autolog:postprocess');
+const preprocess = debug('Autologger:preprocess');
+const postprocess = debug('Autologger:postprocess');
 
-const Autolog = (opt = {}) => (type = '') => {
+const Autologger = (opt = {}) => (type = '') => {
     const wrapper = getLogWrapper(type);
 
     return (logger = {}) => {
@@ -48,4 +48,4 @@ const Autolog = (opt = {}) => (type = '') => {
     };
 };
 
-module.exports = Autolog;
+module.exports = Autologger;
