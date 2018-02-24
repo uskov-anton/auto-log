@@ -19,5 +19,8 @@
     "email": "uskov.anton@gmail.com",
     "url": "https://github.com/uskov-anton"
   },
+  "dependencies": {
+    "debug": "^3.1.0"
+  },
   "license": "MIT"
 }
