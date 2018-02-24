@@ -1,5 +1,5 @@
 {
-  "name": "auto-log",
+  "name": "autologger",
   "version": "0.1.0",
   "description": "small automatic log utility",
   "main": "index.js",

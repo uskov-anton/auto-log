@@ -1,9 +1,9 @@
-# auto-log
+# autologger
 
 ## Install
 
 ```bash
-$ npm install auto-log --save
+$ npm install autologger --save
 ```
 
 ## License
