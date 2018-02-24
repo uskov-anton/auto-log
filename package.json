@@ -1,0 +1,23 @@
+{
+  "name": "auto-log",
+  "version": "0.0.0",
+  "description": "Auto log",
+  "main": "index.js",
+  "keywords": [
+    "auto",
+    "autolog",
+    "auto-log",
+    "automatic",
+    "console",
+    "debug",
+    "log",
+    "logging",
+    "logger"
+  ],
+  "author": {
+    "name": "Uskov Anton",
+    "email": "uskov.anton@gmail.com",
+    "url": "https://github.com/uskov-anton"
+  },
+  "license": "MIT"
+}
