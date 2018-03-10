@@ -12,12 +12,16 @@ describe('Check autologger/function', () => {
 
     describe('target - sync function', () => {
         const result = { foo: { bar: null } };
-        const loggedTarget = autologger(function(){
-            return result;
-        });
+        const loggedTarget = autologger(() => result);
 
         test('logged target is a function', () => {
             expect(typeof loggedTarget).toBe('function');
+        });
+
+        test('logged target is a sync function', () => {
+            expect(
+                isAsync(loggedTarget)
+            ).toBeFalsy();
         });
 
         test('result of the logged target is equal to the result of the target', () => {
@@ -27,8 +31,10 @@ describe('Check autologger/function', () => {
 
     describe('target - async function', () => {
         const result = { foo: { bar: null } };
-        const loggedTarget = autologger(async function(){
-            return result;
+        const loggedTarget = autologger(async () => result);
+
+        test('logged target is a function', () => {
+            expect(typeof loggedTarget).toBe('function');
         });
 
         test('logged target is a async function', () => {
