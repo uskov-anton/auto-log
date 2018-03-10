@@ -42,6 +42,21 @@ describe('Check autologger/function', () => {
         });
     });
 
+    describe('target - method of function prototype', () => {
+        const Target = function(){};
+        const result = { foo: { bar: null } };
+
+        Target.prototype.method = autologger(() => result);
+
+        test('logged target is a function', () => {
+            expect(typeof Target.prototype.method).toBe('function');
+        });
+
+        test('result of the logged target is equal to the result of the target', () => {
+            expect(new Target().method()).toBe(result);
+        });
+    });
+
     describe('throw for target', () => {
         const types = {
             'undefined': undefined,
