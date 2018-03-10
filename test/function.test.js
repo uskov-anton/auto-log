@@ -10,7 +10,7 @@ describe('Check autologger/function', () => {
 
     const autologger = Function();
 
-    describe('target sync function', () => {
+    describe('target - sync function', () => {
         const result = { foo: { bar: null } };
         const loggedTarget = autologger(function(){
             return result;
@@ -25,7 +25,7 @@ describe('Check autologger/function', () => {
         });
     });
 
-    describe('target async function', () => {
+    describe('target - async function', () => {
         const result = { foo: { bar: null } };
         const loggedTarget = autologger(async function(){
             return result;
