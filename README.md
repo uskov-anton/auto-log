@@ -34,8 +34,6 @@ Logs the wrapping of a variable by an automatic logger. Must contain two propert
 |preprocess|function|no|
 |postprocess|function|no|
 
-> By default, the logger is used based on the [debug](https://github.com/visionmedia/debug) module. To activate, you must declare the environment variable `NODE_ENV=Autologger:*`
-
 ### type
 
 The type of the variable to which automatic logging is applied. One of the following values:

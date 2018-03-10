@@ -1,5 +1,3 @@
-const debug = require('debug');
-
 const Class = require('./lib/class');
 const Function = require('./lib/function');
 const Method = require('./lib/method');
@@ -23,9 +21,6 @@ const getLogWrapper = (type = '') => {
     }
 };
 
-const preprocess = debug('Autologger:preprocess');
-const postprocess = debug('Autologger:postprocess');
-
 const Autologger = (opt = {}) => (type = '') => {
     const wrapper = getLogWrapper(type);
 
@@ -33,15 +28,11 @@ const Autologger = (opt = {}) => (type = '') => {
         const wrap = wrapper(logger);
     
         return (...arg) => {
-            opt.preprocess 
-                ? opt.preprocess(type, ...arg)
-                : preprocess(`[${type}]`, ...arg);
+            opt.preprocess && opt.preprocess(type, ...arg);
     
             const result = wrap(...arg);
 
-            opt.postprocess
-                ? opt.postprocess(type, result)
-                : postprocess(`[${type}] %o`, result);
+            opt.postprocess && opt.postprocess(type, result);
     
             return result;
         };
